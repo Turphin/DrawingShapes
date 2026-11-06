@@ -15,7 +15,8 @@ public class Shapes {
         yertle.forward(100);
         yertle.down();
         // Task 2: Draw a regular shape many times
-        for (int j = 0; j < 10; j++) {
+        int rep = 10;
+        for (int j = 0; j < rep; j++) {
             for (int i = 0; i < n; i++) {
                 yertle.forward(length);
                 yertle.right(360/n);
@@ -29,7 +30,7 @@ public class Shapes {
         yertle.down();
         // Task 3: How many times does Turtle turn!
         int turnCount = 0;
-        for (int j = 0; j < 10; j++) {
+        for (int j = 0; j < rep; j++) {
             for (int i = 0; i < n; i++) {
                 yertle.forward(length);
                 yertle.right(360/n);
@@ -40,11 +41,32 @@ public class Shapes {
         }
         System.out.println("yertle has turned " + turnCount + " times!");
 
-        
-        // Extension 1:
-
+        yertle.up();
+        yertle.right(180);
+        yertle.forward(100);
+        yertle.down();
+        // Extension 1: Random
+        n = (int)Math.random()*8+5;
+        rep = (int)Math.random()*16+5;
+        for (int j = 0; j < rep; j++) {
+            for (int i = 0; i < n; i++) {
+                yertle.forward(length);
+                yertle.right(360/n);
+            }
+            yertle.right(10);
+        }
 
         // Extension 2:
-
+        Turtle mertle = new Turtle(125,125);
+        n = (int)Math.random()*8+5;
+        int m = (int)Math.random()*80+20;
+        for (int i = 1; i <= m; i++) {
+            for (int j = 0; j < n; j++) {
+                mertle.forward(2*i);
+                mertle.right(360/n);
+            }
+            mertle.forward(2*i);
+            mertle.right(90);
+        }
     }
 }
