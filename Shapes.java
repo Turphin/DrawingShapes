@@ -65,7 +65,6 @@ public class Shapes {
                 mertle.forward(2*i);
                 mertle.right(360/n);
             }
-            mertle.forward(2*i);
             mertle.right(90);
         }
     }
