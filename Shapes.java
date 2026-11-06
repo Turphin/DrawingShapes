@@ -46,8 +46,8 @@ public class Shapes {
         yertle.forward(100);
         yertle.down();
         // Extension 1: Random
-        n = (int)Math.random()*8+5;
-        rep = (int)Math.random()*16+5;
+        n = (int)(Math.random()*8)+5;
+        rep = (int)(Math.random()*6)+5;
         for (int j = 0; j < rep; j++) {
             for (int i = 0; i < n; i++) {
                 yertle.forward(length);
@@ -59,10 +59,10 @@ public class Shapes {
         // Extension 2: Additional Use of Loop Variable
         Turtle mertle = new Turtle(125,125);
         n = (int)Math.random()*8+5;
-        int m = (int)Math.random()*80+20;
+        int m = (int)(Math.random()*80)+20;
         for (int i = 1; i <= m; i++) {
             for (int j = 0; j < n; j++) {
-                mertle.forward(2*i);
+                mertle.forward(i);
                 mertle.right(360/n);
             }
             mertle.right(75);
